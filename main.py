@@ -50,7 +50,10 @@ while True:
         slownik[noweimie] = nowaocena
     elif opcja == '3':
         ocenadousuniecia = input("Jakiego ucznia (z oceną) chcesz usunąć? : ")
-        slownik.pop(ocenadousuniecia)
+        if ocenadousuniecia in slownik:
+            slownik.pop(ocenadousuniecia)
+        else:
+            continue
     elif opcja == '4':
         # Tworzenie słownika
         Json_object = json.dumps(slownik, indent=4)
