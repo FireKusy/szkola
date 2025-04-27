@@ -22,23 +22,23 @@
  with open("Slownik.json","w") as outfile:
 	outfile.write(Json_object)
 
- - Opening JSON file
+ - Opening JSON file -
  with open('Slownik.json', 'r') as openfile:
-	- Reading from json file
+	- Reading from json file -
 	czytanyslownik = json.load(openfile)
 
  print(czytanyslownik)
 
- Run:
+ # Run:
 
- Podajemy dla przykłady imię Ania z oceną 4:
+ - Podajemy dla przykłady imię Ania z oceną 4: -
 
  Jakie imię chcesz dodać? : Ania
  Jaką ocenę otrzymała ta osoba? : 4
  {'Ola': '5', 'Pola': '4', 'Tola': '3', 'Ania': '4'}
  {'Ola': '5', 'Pola': '4', 'Tola': '3', 'Ania': '4'}
 
- Plik w formacie json wygląda tak(Slownik.json):
+ # Plik w formacie json wygląda tak(Slownik.json):
 
  {
      "Ola": "5",
@@ -46,12 +46,12 @@
      "Ania": "4"
  }
 
- Następnie tworzę kolejny plik (main.py), odczytywujący plik json i tworzący aplikację, która daje opcje do wyboru, dotyczące operowania aplikacji:
+ # Następnie tworzę kolejny plik (main.py), odczytywujący plik json i tworzący aplikację, która daje opcje do wyboru, dotyczące operowania aplikacji:
 
  import json
 
  with open('Slownik.json', 'r') as openfile:
-     - Reading from json file
+     - Reading from json file -
      slownik = json.load(openfile)
 
  while True:
@@ -73,11 +73,11 @@
          else:
              continue
      elif opcja == '4':
-         - Tworzenie słownika
+         - Tworzenie słownika -
          Json_object = json.dumps(slownik, indent=4)
-         - Owieranie pliku jako outfile
+         - Owieranie pliku jako outfile -
          with open("Slownik.json", "w") as outfile:
               outfile.write(Json_object)
          break
 
- Plik json (Slownik.json) po zedytowaniu się zmienia na podstawie dodawania, usuwania lub zapisywania tej w aplikacji.
+ # Plik json (Slownik.json) po zedytowaniu się zmienia na podstawie dodawania, usuwania lub zapisywania tej w aplikacji.
