@@ -10,6 +10,7 @@ print(slownik)
 
 Json_object = json.dumps(slownik, indent = 4)
 
+# Pisanie
 with open("Slownik.json","w") as outfile:
 	outfile.write(Json_object)
 
