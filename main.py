@@ -32,8 +32,9 @@ import json
 #3 - usun
 #4 - zapisz i wyjdz
 
+# Otwieranie
 with open('Slownik.json', 'r') as openfile:
-    # Reading from json file
+    # Reading from json file - Czytanie
     slownik = json.load(openfile)
 
 while True:
