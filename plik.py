@@ -13,9 +13,9 @@ Json_object = json.dumps(slownik, indent = 4)
 with open("Slownik.json","w") as outfile:
 	outfile.write(Json_object)
 
-# Opening JSON file
+# Opening JSON file - Otwieranie
 with open('Slownik.json', 'r') as openfile:
-	# Reading from json file
+	# Reading from json file - Czytanie
 	czytanyslownik = json.load(openfile)
 
 print(czytanyslownik)
