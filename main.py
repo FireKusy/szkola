@@ -49,9 +49,9 @@ while True:
         nowaocena = input("Jaką ocenę otrzymała ta osoba? : ")
         slownik[noweimie] = nowaocena
     elif opcja == '3':
-        ocenadousuniecia = input("Jakiego ucznia (z oceną) chcesz usunąć? : ")
-        if ocenadousuniecia in slownik:
-            slownik.pop(ocenadousuniecia)
+        uczendousuniecia = input("Jakiego ucznia (z oceną) chcesz usunąć? : ")
+        if uczendousuniecia in slownik:
+            slownik.pop(uczendousuniecia)
         else:
             continue
     elif opcja == '4':
@@ -60,4 +60,6 @@ while True:
         # Owieranie pliku jako outfile
         with open("Slownik.json", "w") as outfile:
             outfile.write(Json_object)
+    else:
         break
+    break
